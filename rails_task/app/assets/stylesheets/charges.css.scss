@@ -1,0 +1,69 @@
+// Place all the styles related to the charges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+a {
+  margin: 10px 50px 10px 50px;
+  display: block;
+  font-size: 25px;
+}
+
+h1 {
+  margin: 5px;
+  padding: 5px;
+}
+
+#charges_box {
+  .charges_list.failed li.charges{
+    background-color: #FF0000;
+    max-width: 250px;
+    margin: 5px;
+  }
+
+  .charges_list.disputed li.charges{
+    background-color: #FF5400;
+    max-width: 250px;
+    margin: 5px;
+  }
+
+  .charges_list.success li.charges{
+    max-width: 250px;
+    margin: 5px;
+  }
+
+  .clear_both {
+    clear: both;
+  }
+
+  .charges_list {
+    display: block;
+    background-color: #fafafa;
+    border: 1px solid #d7d7d7;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+#form_box {
+
+  label {
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+  }
+  input, select {
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+  }
+
+  .submit {
+     margin-left: 185px;
+  }
+}
+

@@ -1,0 +1,14 @@
+#form_box
+  = link_to "Back to charges list >>", "/charges"
+  = form_for @charge, :url => {:action => "create", :controller => "charges"} do |f|
+    = label_tag :customer, "Customers", :class => "label"
+    = select_tag :customer, options_from_collection_for_select(@customers, "id", "name"), :class => "form-control"
+
+    .clear_both
+    = f.label :amount, "Amount", :class => "label"
+    = f.text_field :amount, :class => "form-control"
+    .clear_both
+    = f.label :currency, "Currency", :class => "label"
+    = f.select :currency, @currencies, {}, { :class => "form-control"}
+    .clear_both
+    = f.submit "Add new charge", :class => "submit btn btn-primary"

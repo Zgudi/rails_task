@@ -1,0 +1,34 @@
+#charges_box
+  = link_to "Create new charge >>", "/charges/new"
+  .charges_list.failed
+    %h1 Failed Charges
+    %ul
+      - @customers_for_failed.each do |customer|
+        %li
+          = "#{customer.name} #{customer.surname}: #{customer.charges.count}"
+          %ul
+            - customer.charges.each do |charge|
+              %li.charges
+                = charge.updated_at
+
+  .charges_list.disputed
+    %h1 Disputed Charges
+    %ul
+      - @customers_for_disputed.each do |customer|
+        %li
+          = "#{customer.name} #{customer.surname}: #{customer.charges.count}"
+          %ul
+            - customer.charges.each do |charge|
+              %li.charges
+                = charge.updated_at
+
+  .charges_list.success
+    %h1 Successful Charges
+    %ul
+      - @customers_for_success.each do |customer|
+        %li
+          = "#{customer.name} #{customer.surname}: #{customer.charges.count}"
+          %ul
+            - customer.charges.each do |charge|
+              %li.charges
+                = charge.updated_at
